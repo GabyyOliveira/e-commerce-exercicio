@@ -1,0 +1,24 @@
+<section class="login">
+  <h3 class="text-center mt-5">Compra</h3>
+  <form>
+    <input type="text" placeholder="Nome..." name="nome" [(ngModel)]="nome">
+      <input type="date" name="data" placeholder="Data Nascimento" class="senha" [(ngModel)]="data">
+      <input type="number" name="camisa" (blur)="valorTotal()" placeholder="Quantidade de Camisetas..." [(ngModel)]="quantidade">
+      <select  name="frete" [(ngModel)]="frete">
+        <option>Selecione uma opção</option>
+        <option value="sp">São Paulo</option>
+        <option value="outros">Outros</option>
+      </select>
+      <div [ngSwitch]="frete" class="text-center">
+        <p *ngSwitchCase="'sp'" >Frete: R$20,00</p>
+        <p *ngSwitchCase="'outros'">Frete: R$60,00</p>
+      </div>
+      <button type="submit" (click)="totalFrete()">Comprar</button>
+  </form>
+</section>
+<div class="login2">
+    <p class="text-center"><b>Nome Do cliente:</b> <br>{{nome}}</p>
+    <p class="text-center"><b>Data de Nascimento:</b> <br>{{data | date: 'shortDate'}}</p>
+    <p class="text-center"><b>Quantidade de camisetas:</b> <br>{{quantidade}}</p>
+    <p class="text-center"><b>Valor Total:</b> <br>{{fretetotal | currency: 'BRL'}}</p>
+</div>

@@ -1,0 +1,107 @@
+<div class="container w-50 navi">
+  <div class="row navi">
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card mt-3" style="width: 10rem;">
+        <img src="assets/img/t-shirts.png" class="card-img-top img-thumbnail" alt="...">
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card mt-3" style="width: 10rem;">
+        <img src="assets/img/ace.png" class="card-img-top img-thumbnail" alt="...">
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card mt-3" style="width: 10rem;">
+        <img src="assets/img/eletronicos.png" class="card-img-top img-thumbnail" alt="...">
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="card mt-3" style="width: 10rem;">
+        <img src="assets/img/calcados.png" class="card-img-top img-thumbnail" alt="...">
+      </div>
+    </div>
+   
+  </div>
+
+ 
+</div>
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">T-shirts</h1>
+  </div>
+  <div class="row" name="camiseta">
+
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mt-3" >
+        <img src="assets/img/legacy.png" class="card-img-top img-thumbnail" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" value="legacy">Camiseta Legacy</h5>
+          <p class="card-text">R$25,00</p>
+          <select name="corL" [(ngModel)]="corL">
+            <option value="preta1">Preta</option>
+            <option value="branca1">Branca</option>
+          </select>
+          <div [ngSwitch]="corL">
+            <p *ngSwitchCase="'preta1'">Você escolheu a camiseta na cor preta</p>
+            <p *ngSwitchCase="'branca1'">Você escolheu a camiseta na cor branca</p>
+          </div><br>
+          <button routerLink="/cadastro" class="btn">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mt-3">
+        <img src="assets/img/game.png" class="card-img-top img-thumbnail" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" value="gamer">Camiseta Gamer</h5>
+          <p class="card-text">R$25,00</p>
+          <select name="corG" [(ngModel)]="corG">
+            <option value="preta2">Preta</option>
+            <option value="branca2">Branca</option>
+          </select>
+          <div [ngSwitch]="corG">
+            <p *ngSwitchCase="'preta2'">Você escolheu a camiseta na cor preta</p>
+            <p *ngSwitchCase="'branca2'">Você escolheu a camiseta na cor branca</p>
+          </div><br>
+          <button  routerLink="/cadastro" class="btn">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mt-3">
+        <img src="assets/img/soulcode.png" class="card-img-top img-thumbnail" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" value="soulcode">Camiseta SoulCode</h5>
+          <p class="card-text">R$25,00</p>
+          <select name="corS" [(ngModel)]="corS">
+            <option value="preta3">Preta</option>
+            <option value="branca3">Branca</option>
+          </select>
+          <div [ngSwitch]="corS">
+            <p *ngSwitchCase="'preta3'">Você escolheu a camiseta na cor preta</p>
+            <p *ngSwitchCase="'branca3'">Você escolheu a camiseta na cor branca</p>
+          </div><br>
+          <button routerLink="/cadastro" class="btn">Comprar</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <div class="card mt-3">
+        <img src="assets/img/bcw7.png" class="card-img-top img-thumbnail" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" value="bcw7">Camiseta BCW7</h5>
+          <p class="card-text">R$25,00</p>
+          <select name="corB" [(ngModel)]="corB">
+            <option value="preta4">Preta</option>
+            <option value="branca4">Branca</option>
+          </select>
+          <div [ngSwitch]="corB">
+            <p *ngSwitchCase="'preta4'">Você escolheu a camiseta na cor preta</p>
+            <p *ngSwitchCase="'branca4'">Você escolheu a camiseta na cor branca</p>
+          </div><br>
+          <button  routerLink="/cadastro" class="btn">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
